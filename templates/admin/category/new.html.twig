@@ -1,0 +1,9 @@
+{% extends "admin/base.html.twig" %}
+
+{% block body %}
+    <h1>ajouter une Category</h1>
+
+    {{ include('admin/category/_form.html.twig') }}
+
+    <a  class="btn btn-primary" href="{{ path('admin_category_index') }}">revenir a la liste</a>
+{% endblock %}

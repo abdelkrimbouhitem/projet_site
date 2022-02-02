@@ -1,0 +1,46 @@
+{% extends "admin/base.html.twig" %}
+
+{% block body %}
+       <div class= "container py-5"> 
+        <div classe="row">
+
+      
+       <div class="col-12 d-flex align-item-center justify-content-between">
+       <h3>liste des categories</h3>
+        <a class="btn btn-primary"href="{{path('admin_category_new') }}">ajouter</a>
+       </div>
+
+        {% for category in categories %}
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                   
+
+                <div class="card" >
+                      <img src="{{category.getImagePath}}" class="imageCard" alt="image_category">
+                     <div class="card-body">
+                     <h5 class="card-title">{{category.name}}</h5>
+                     <p class="card-text">{{category.description}}</p>
+                    <a href="#" class="btn btn-primary w-100">gerer</a>
+                   </div>
+                </div>
+
+
+
+
+            </div>
+        {% endfor %}
+        </div>
+
+     
+
+
+
+
+
+   
+            </div>
+    
+{% endblock %}
+
+
+
+ 
